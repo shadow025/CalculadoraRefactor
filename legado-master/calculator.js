@@ -57,6 +57,12 @@ memoria -= intBuffer;
 } else if (ultimo_operador === '*') {
 memoria *= intBuffer;
 } else if (ultimo_operador === '/') {
+if (intBuffer === 0) {
+buffer = "Error";
+memoria = 0;
+ultimo_operador = null;
+return;
+}
 memoria /= intBuffer;
 }
 }
